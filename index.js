@@ -15,7 +15,7 @@ const koders = [
   },
   {
     id: 3,
-    name: 'lucho'
+    name: 'Lucho'
   }
 ]
 

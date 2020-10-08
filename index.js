@@ -1,4 +1,3 @@
-const { request, response } = require('express')
 const express = require('express')
 
 const app = express()
@@ -31,13 +30,13 @@ app.get('/koders', (req, res) => {
 
 app.post('/koders', (req, res) => {
   if (req.body.name) {
-    let id = koders.length + 1
-    let name = req.body.name
-    koders.push({ 'id': id, 'name': name })
+    const id = koders.length + 1
+    const name = req.body.name
+    koders.push({ id: id, name: name })
     console.log(koders)
     res.json({
       success: true,
-      message: 'All Koders',
+      message: 'Lista de Koders',
       data: {
         koders
       }

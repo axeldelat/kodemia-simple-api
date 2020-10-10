@@ -92,6 +92,10 @@ app.delete('/koders/:id', (req, res) => {
   const arrayToDelete = koderfound.id-1
   koders.splice(arrayToDelete, 1)
 
+koders.map((koder) => {
+  koder.id = koders.indexOf(koder) + 1
+})
+
   res.json({
     success: true,
     message: 'Koder Eliminado',
